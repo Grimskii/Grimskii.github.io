@@ -50,7 +50,11 @@
 		Star.prototype = {
 			create: function(){
 				context.beginPath();
-				context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+				
+				let x = this.x + config.parallaxX;
+				let y = this.y + config.parallaxY;
+				
+				context.arc(x, y, this.radius, 0, Math.PI * 2, false);
 				context.fill();
 			},
 
@@ -98,8 +102,8 @@
 								(iStar.y - config.position.y) > - config.radius
 							) {
 								context.beginPath();
-								context.moveTo(iStar.x, iStar.y);
-								context.lineTo(jStar.x, jStar.y);
+								context.moveTo(iStar.x + config.parallaxX, iStar.y + config.parallaxY);
+								context.lineTo(jStar.x + config.parallaxX, jStar.y + config.parallaxY);
 								context.stroke();
 								context.closePath();
 							}
@@ -115,6 +119,12 @@
 				i;
 
 			context.clearRect(0, 0, canvas.width, canvas.height);
+			
+			config.parallaxX = config.position.x - canvas.width / 2;
+			config.parallaxY = config.position.y - canvas.height / 2;
+			
+			config.parallaxX *= -0.02;
+			config.parallaxY *= -0.02;
 
 			for (i = 0; i < length; i++) {
 				config.stars.push(new Star());
@@ -122,7 +132,7 @@
 
 				star.create();
 			}
-
+			
 			star.line();
 			star.animate();
 		};
