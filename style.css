@@ -39,10 +39,15 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	animation: 1.5s ease-out 0s 1 showUpFromBottom;
 }
 
-.root .container {
+.middle {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.middle .container {
 	background: #121317;
 	padding: 20px;
 	border-radius: 30px;
@@ -169,17 +174,4 @@ body {
 		/*transform: translateX(28vh);*/
 		display: none;
 	}
-}
-
-@keyframes showUpFromBottom {
-    0% {
-        transform: translateY(20px);
-		opacity: 0;
-    }
-	50% {
-        transform: translateY(0px);
-	}
-    100% {
-		opacity: 1;
-    }
 }

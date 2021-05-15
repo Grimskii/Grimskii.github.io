@@ -1,0 +1,29 @@
+.bg, .middle {
+	animation: 1.5s cubic-bezier(.1,.81,.34,1) 0s 1 showUp;
+}
+
+.bg {
+	animation-name: showUpBg;
+}
+
+@keyframes showUp {
+    0% {
+        transform: translateX(-100%);
+		opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+		opacity: 1;
+    }
+}
+
+@keyframes showUpBg {
+    0% {
+        transform: translateX(-50%);
+		opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+		opacity: 1;
+    }
+}
