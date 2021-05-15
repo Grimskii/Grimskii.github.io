@@ -1,0 +1,155 @@
+/*
+osu! signature
+http://lemmmy.pw/osusig/sig.php?colour=hexed3434&uname=TheDawnbreaker&removeavmargin&darktriangles&onlineindicator=undefined&xpbar&xpbarhex
+*/
+
+html, body {
+	margin: 0;
+    background: #191a1f;
+    color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow: hidden;
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+}
+
+:root {
+	--primary-color: #ed3434;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.bg {
+	z-index: 0;
+	position: absolute;
+}
+
+
+.root {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.root .container {
+	background: #121317;
+	padding: 20px;
+	border-radius: 30px;
+	border-color: var(--primary-color);
+	border-width: 4px;
+	border-style: solid;
+	transform: translate(-18vh, calc(50% - 20vh));
+	z-index: 2;
+	
+	/*background: #12131700;
+	backdrop-filter: blur(5px);*/
+}
+
+.character{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transform: translateX(10vh);
+	z-index: 3;
+	pointer-events: none;
+}
+
+
+.avatar-container {
+	width: 100px;
+	height: 100px;
+	padding: 3px;
+	border-radius: 50%;
+	border-color: var(--primary-color);
+	border-width: 4px;
+	border-style: solid;
+	margin: 8px 0px;
+	display: none;
+}
+
+.avatar {
+	border-radius: 50%;
+	width: 100%;
+	heigth: 100%;
+}
+
+.text-container {
+	margin: 8px 0px;
+}
+
+.text-container * {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 8px 0px;
+	/*max-width: 200px;*/
+}
+
+.link-container {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 60px;
+	height: 60px;
+	transition: 0.2s;
+}
+
+.link-container:hover {
+	transform: scale(1.1);
+}
+
+.link-icon {
+	/*filter: sepia(100%) hue-rotate(-70deg) saturate(15000%);*/
+}
+
+.invert {
+	filter: invert();
+}
+
+.discord-banner {
+	margin-top: 8px;
+	width: 250px;
+}
+
+@media only screen and (max-height: 650px){
+	.character {
+		transform: translateX(20vh);
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 590px), screen and (max-height: 420px){
+	.avatar-container {
+		display: block;
+	}
+	
+	.root .container {
+		transform: none;
+		
+		/*transform: translate(0, calc(50% - 20vh));*/
+	}
+
+	.character {
+		/*transform: translateX(28vh);*/
+		display: none;
+	}
+}
