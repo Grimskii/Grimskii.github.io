@@ -132,6 +132,21 @@ body {
 	width: 250px;
 }
 
+.credit {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 10px;
+	color: #999;
+	font-size: 12;
+}
+
+.credit a {
+	color: #ff84bd;
+}
+
+
+
 @media only screen and (max-height: 650px){
 	.character {
 		transform: translateX(20vh);
