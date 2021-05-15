@@ -174,4 +174,8 @@ body {
 		/*transform: translateX(28vh);*/
 		display: none;
 	}
+
+	.credit {
+		font-size: 16;
+	}
 }
