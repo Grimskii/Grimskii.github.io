@@ -132,7 +132,7 @@ body {
 	font-size: 0.75em;
 }
 
-.credit a {
+.credit a, .credit .fas {
 	color: #ff84bd;
 }
 
