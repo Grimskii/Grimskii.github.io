@@ -111,30 +111,16 @@ body {
 	/*max-width: 200px;*/
 }
 
-.link-container {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-	width: 60px;
-	height: 60px;
-	transition: 0.2s;
+.link {
+	margin: 13px;
 	font-size: 2.5em;
+	color: white;
+	text-decoration: none;
+	transition: color 0.1s;
 }
 
-.link-container a {
-	color: inherit;
-}
-
-.link-container:hover {
+.link:hover {
 	color: var(--primary-color);
-}
-
-.link-icon {
-	/*filter: sepia(100%) hue-rotate(-70deg) saturate(15000%);*/
-}
-
-.invert {
-	filter: invert();
 }
 
 .credit {
