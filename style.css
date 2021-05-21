@@ -117,11 +117,16 @@ body {
     justify-content: center;
 	width: 60px;
 	height: 60px;
-	transition: transform 0.2s;
+	transition: 0.2s;
+	font-size: 2.5em;
+}
+
+.link-container a {
+	color: inherit;
 }
 
 .link-container:hover {
-	transform: scale(1.1);
+	color: var(--primary-color);
 }
 
 .link-icon {
@@ -138,7 +143,7 @@ body {
 	left: 0;
 	margin: 10px;
 	color: #999;
-	font-size: 12;
+	font-size: 0.75em;
 }
 
 .credit a {
@@ -171,6 +176,12 @@ body {
 	}
 
 	.credit {
-		font-size: 16;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		
+		font-size: 0.9em;
 	}
 }
