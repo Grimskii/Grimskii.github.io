@@ -63,7 +63,7 @@ body {
 	position: absolute;
 	top: 0;
 	height: 100%;
-	transform: translateX(10vh);
+	transform: translateX(15vh);
 	z-index: 3;
 	pointer-events: none;
 	user-select: none;
@@ -134,29 +134,24 @@ body {
 	color: #ff84bd;
 }
 
+/* BEWARE! ABSOLUTELY HORRENDOUS CODE BELOW! PROCEED AT YOUR OWN RISK! */
 
 
-@media only screen and (max-height: 650px){
+/* Adjust character on low height resolutions */
+@media only screen and (max-height: 500px){
 	.character {
 		transform: translateX(20vh);
 	}
 }
 
-/* Mobile */
-@media only screen and (max-width: 590px), screen and (max-height: 420px){
-	.avatar-container {
-		display: block;
-	}
-	
+/* Center screen on low width resolutions */
+@media only screen and (max-width: 590px){
 	.root .container {
-		transform: none;
-		
-		/*transform: translate(0, calc(50% - 20vh));*/
+		transform: translate(0, calc(50% - 20vh));
 	}
 
 	.character {
-		/*transform: translateX(28vh);*/
-		display: none;
+		transform: translateX(200px);
 	}
 
 	.credit {
@@ -167,5 +162,31 @@ body {
 		text-align: center;
 		
 		font-size: 0.9em;
+	}
+}
+
+/* Switch out character for avatar on even lower width resolutions  */
+@media only screen and (max-width: 440px){
+	.avatar-container {
+		display: block;
+	}
+	
+	.character {
+		display: none;
+	}
+	
+	.root .container {
+		transform: none;
+	}
+}
+
+/* Adjust things for really small screens */
+@media only screen and (max-width: 320px), screen and (max-height: 420px){
+	.character {
+		display: none;
+	}
+	
+	.root .container {
+		transform: scale(0.8);
 	}
 }
