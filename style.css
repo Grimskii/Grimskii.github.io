@@ -131,7 +131,7 @@ body {
 }
 
 .credit a, .credit .fas {
-	color: #ff84bd;
+	color: var(--primary-color);
 }
 
 /* BEWARE! ABSOLUTELY HORRENDOUS CODE BELOW! PROCEED AT YOUR OWN RISK! */
